@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 public class CustomersDatabase implements Dao{
 	
+	
 	Connection conn = null;
 	
 	
@@ -54,7 +55,7 @@ public class CustomersDatabase implements Dao{
 	
 	public void addCustomer(Customer customer) throws SQLException
 	{
-		String sql = "INSERT INTO Customers (phoneNumbe, firstName, lastName, emailAdress, UserName, age) VALUES (?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO Customers (phoneNumber, firstName, lastName, emailAdress, UserName, age) VALUES (?, ?, ?, ?, ?, ?)";
 		
 		PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setLong(1, customer.getPhoneNumber());
